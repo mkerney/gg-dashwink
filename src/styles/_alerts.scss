@@ -1,0 +1,23 @@
+.sale-alert-wrapper{
+  .item{
+    img{
+      max-height: 170px;
+      margin    : 0 auto;
+    }
+    .date{
+      display   : inline-block;
+      margin-top: 10px
+    }
+  }
+}
+
+/*--  Media Style  --*/
+@media(min-width: 320px) and (max-width: 480px){
+  .sale-alert-wrapper{
+    .item{
+      img{
+        max-height: 300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+.modal-open .modal,.btn, a:focus{
+  outline:none!important
+}
+.modal-wrapper{
+  .modal-dialog{
+    max-width: 500px;
+    .modal-content{
+      border   : 1px solid $light-gray;
+      @include border-radius(0);
+      /*@include box-shadow(none)*/
+    }
+  }
+  .modal-body{
+    padding    : 40px;
+    position   : relative;
+    padding-top: 90px;
+  }
+  .nav{
+    text-align   : center;
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+    right        : 0;
+    border-bottom: 2px solid $gray;
+    li{
+      width: 50%;
+      float: left;
+      margin: 0;
+      a{
+        margin-bottom   : -2px;
+        line-height     : 26px; 
+        border-bottom   : 2px solid $gray;
+        background-color: transparent;
+        @include border-radius(0);
+        @include transition(all 0.3s ease-in-out);
+        .login-nav-tab{
+          font-family: $circular-std-medium;
+          font-size  : 17px; 
+          color      : $gray;
+          height     : 60px;
+          line-height: 24px;
+          @include transition(all 0.3s ease-in-out);
+        }
+        &:hover, &.active{
+          border-color: $black ;
+          .login-nav-tab{
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  form{
+    input{
+      height: 50px;
+      @include border-radius(0);
+      @include box-shadow(none);
+      &:focus{
+        @include box-shadow(none);
+      }
+    }
+    .term-conditions{
+      font-size : 12px;
+      text-align: center;
+      margin    : 15px 0 30px;
+      a{
+        text-decoration: underline;
+      }
+    }
+    .checkbox{
+      margin: 0;
+      input{
+        height: auto;
+      }
+    }
+  }
+  .btn-block{
+    padding    : 15px;
+    line-height: 16px;
+  }
+  .social-signup{
+    margin-top : 50px;
+    padding-top: 50px;
+    position   : relative;
+    border-top : 1px solid $light-gray;
+    .divider-or{
+      font-weight     : 600;
+      text-align      : center;
+      padding         : 10px 0;
+      display         : block;
+      position        : absolute;
+      top             : -20px;
+      left            : 50%;
+      border          : 1px solid $light-gray;
+      background-color: $white-gray;
+      @include translate(-50%, 0);
+      @include circle(40px);
+    }
+    p{
+      font-size : 12px;
+      text-align: center;
+      margin    : 0 0 30px;
+    }
+    .btn{
+      color    : $white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      position : relative;
+      .fa{
+        font-size: 16px;
+        position : absolute;
+        left     : 16px;
+      }
+    }
+    .btn-google{
+      background-color: $google-color;
+    }
+    .btn-facebook{
+      background-color: $facebook-color;
+    }
+  }
+  .modal-footer{
+    padding: 15px 40px;
+    .btn{
+      color           : $black;
+      min-width       : 120px;
+      padding         : 14px 30px;
+      border-color    : $black;
+      background-color: $white;
+      @include transition(all 0.3s ease-in-out);
+      &:hover{
+        color           : $white;
+        background-color: $black;
+      }
+    }
+  }
+}
+.modal-backdrop{
+  &.in{
+    background: rgba(255,255,255,0.8); 
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 320px) and (max-width: 767px){ 
+  .modal-wrapper{
+    .modal-dialog{
+      margin: 0 auto;
+    }
+    .navbar-nav{
+      margin: 0;
+    }
+    form{
+      .checkbox-login{
+        margin-bottom: 15px;
+      }
+    }
+    .social-signup{
+      .row{
+        .col-sm-6{
+          &:first-of-type{
+            .btn-block{
+              margin-bottom: 15px;
+            }       
+          }
+        }
+      }
+    }
+  }
+}
+@media(min-width: 320px) and (max-width: 600px){ 
+  .modal-wrapper{
+    .modal-dialog{
+      margin: 0 auto;
+    }
+    .navbar-nav{
+      margin: 0;
+    }
+    .social-signup{
+      .row{
+        .col-xs-6{
+          width: 100%;
+          &:first-of-type{
+            .btn-block{
+              margin-bottom: 15px;
+            }       
+          }
+        }
+      }
+    }
+  }
+}

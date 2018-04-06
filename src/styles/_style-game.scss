@@ -1,0 +1,61 @@
+.style-game-wrapper{
+  margin-bottom: 50px;
+  h2{
+    margin: 45px 0 0;
+  }
+  .styles{
+    margin   : 40px auto;
+    max-width: 1200px;
+    li{
+      padding: 5px;
+      .btn{
+        padding         : 5px;
+        min-height      : 80px;
+        min-width       : 80px;
+        border          : 1px solid $gray;
+        opacity         : 0.5;
+        background-color: $white;
+        @include box-shadow(none);
+      }
+    }
+  }
+  h3{
+    margin: 0 0 30px;
+  }
+  .style-group-wrapper{
+    margin   : 0 auto;
+    max-width: 600px;
+    .row{
+      margin: 0 -5px;
+      .col-sm-4{
+        padding: 0 5px;
+      }
+    }
+    .btn{
+      padding: 0;
+      width  : 100%;
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 320px) and (max-width: 767px){
+  .style-game-wrapper{
+    margin-bottom: 30px;
+    h2{
+      font-size: 24px;
+      margin   : 30px 0 0;
+    }
+    .styles{
+      margin: 20px auto;
+    }
+    h3{
+      font-size: 20px;
+      margin   : 0 0 30px;
+    }
+  }
+}

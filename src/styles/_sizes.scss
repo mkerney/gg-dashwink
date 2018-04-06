@@ -1,0 +1,43 @@
+.size-wrapper{
+  h1{
+    margin: 0;
+  }
+  h3{
+    margin: 60px 0 30px;
+  }
+  .btn-toolbar{
+    margin    : 0;
+    text-align: center;
+    button{
+      color      : $gray;
+      font-size  : 18px;
+      font-weight: 600;
+      margin     : 5px;
+      float      : none;
+      width      : 80px;
+      height     : 50px;
+      @include transition(all 0.3s ease-in-out);
+      &:hover, &:active, &:focus, &.selected{
+        color           : $black;
+        border-color    : $black;
+        background-color: transparent;
+      }
+    }
+  }
+  .btn-black{
+    display: block;
+    margin : 40px auto 0;
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 320px) and (max-width: 767px){ 
+  .size-wrapper{
+    h1{
+      font-size: 28px;
+    }
+    h3{
+      margin: 30px 0 20px;
+    }
+  }
+}

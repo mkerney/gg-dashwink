@@ -1,0 +1,121 @@
+.item-sidebar-wrapper{
+  color        : $sidebar-gray;
+  padding      : 15px 0;
+  border-top   : 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  position     : relative;
+  .btn-toggle-sidebar{
+    max-width: 25px;
+    position: absolute;
+    top: 0;
+    right: -45px;
+    padding: 0;
+    z-index: 9;
+    span{
+      font-size: 24px;
+    }
+  }
+  .btn{
+    font-size : 15px;
+    color     : $dark-gray-2;
+    text-align: left;
+    display   : block;
+    width     : 100%;
+    border    : 0;
+    @include border-radius(0);
+    @include box-shadow(none);
+    .fa-angle-down{
+      float: right;
+    }
+    &:focus, &:hover{
+      background-color: transparent;
+    }
+  }
+  .panel{
+    margin: 0;
+    border: 0;
+    @include border-radius(0);
+    .dropdown{
+      display: block;
+      .btn-default{
+        text-align      : center;
+        background-color: transparent;
+        @include box-shadow(none);
+      }
+      .dropdown-menu{
+        a{
+          text-decoration: none;
+          width          : 100%;
+          margin         : 0;
+        }
+      }
+    }
+    .panel-body{
+      padding: 0 12px;
+    }
+    a{
+      color          : $sidebar-gray;
+      text-decoration: underline;
+      display        : inline-block;
+      margin-left    : 32px;
+    }
+  }
+  .custom-check{
+    margin-bottom: 10px;
+    &:first-of-type{
+      margin-top: 10px;
+    }
+    &:last-of-type{
+      padding      : 0 0 20px 0;
+      border-bottom: 1px solid $light-gray;
+      margin-bottom: 20px;
+    }
+  }
+  .form-control{
+    @include border-radius(0);
+  }
+}
+
+@media(min-width: 1200px){
+  .item-sidebar-wrapper{
+    padding-right : 30px;
+  }
+}
+
+@media(min-width: 992px){
+  .item-sidebar-wrapper{
+    .btn-toggle-sidebar{
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 991px){
+  .item-wrapper{
+    position: relative;
+    overflow: hidden;
+    .item-sidebar-wrapper{
+      position: absolute;
+      width: 280px;
+      left: -300px;
+      top: 35px;
+      @include transition(all 0.3s ease-in-out);
+    }
+    .item-content{
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+  .item-wrapper{
+    .item-content{
+      right: 0;
+    }
+    &.sidebar-open{
+      .item-sidebar-wrapper{
+        left: 0;
+      }
+      .item-content{
+        right: -300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/*--  SF Text Regular  --*/
+@font-face {
+  font-family: 'SF Text Regular';
+  src: url('sf-text-regular/sf-text-regular.eot'); 
+  src: url('sf-text-regular/sf-text-regular.eot?#iefix') format('embedded-opentype'),
+    url('sf-text-regular/sf-text-regular.otf') format('otf'),
+    url('sf-text-regular/sf-text-regular.woff') format('woff'),
+    url('sf-text-regular/sf-text-regular.ttf')  format('truetype'),
+    url('sf-text-regular/sf-text-regular.svg#svgFontName') format('svg'); 
+}
+
+/*--  SF Text Semibold  --*/
+@font-face {
+  font-family: 'SF Text Semibold';
+  src: url('sf-text-semibold/sf-text-semibold.eot'); 
+  src: url('sf-text-semibold/sf-text-semibold.eot?#iefix') format('embedded-opentype'),
+    url('sf-text-semibold/sf-text-semibold.otf') format('otf'),
+    url('sf-text-semibold/sf-text-semibold.woff') format('woff'),
+    url('sf-text-semibold/sf-text-semibold.ttf')  format('truetype'),
+    url('sf-text-semibold/sf-text-semibold.svg#svgFontName') format('svg'); 
+}
+
+/*--  Circular Std Bold  --*/
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url( 'CircularStd-Book/CircularStd-Book.eot'); 
+  src: url('CircularStd-Book/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('CircularStd-Book/CircularStd-Book.otf') format('otf'),
+    url('CircularStd-Book/CircularStd-Book.woff') format('woff'),
+    url('CircularStd-Book/CircularStd-Book.ttf')  format('truetype'),
+    url('CircularStd-Book/CircularStd-Book.svg#svgFontName') format('svg'); 
+}
+
+/*--  Circular Std Medium  --*/
+@font-face {
+  font-family: 'Circular Std Medium';
+  src: url( 'CircularStd-Medium/CircularStd-Medium.eot'); 
+  src: url('CircularStd-Medium/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+    url('CircularStd-Medium/CircularStd-Medium.otf') format('otf'),
+    url('CircularStd-Medium/CircularStd-Medium.woff') format('woff'),
+    url('CircularStd-Medium/CircularStd-Medium.ttf')  format('truetype'),
+    url('CircularStd-Medium/CircularStd-Medium.svg#svgFontName') format('svg'); 
+}
+
+/*--  Circular Std Bold  --*/
+@font-face {
+  font-family: 'Circular Std Bold';
+  src: url('CircularStd-Bold/CircularStd-Bold.eot'); 
+  src: url('CircularStd-Boldt/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('CircularStd-Bold/CircularStd-Bold.otf') format('otf'),
+    url('CircularStd-Bold/CircularStd-Bold.woff') format('woff'),
+    url('CircularStd-Bold/CircularStd-Bold.ttf')  format('truetype'),
+    url('CircularStd-Bold/CircularStd-Bold.svg#svgFontName') format('svg'); 
+}
+
+/*--  Bell MT Regular  --*/
+@font-face {
+  font-family: 'Bell MT Regular';
+  src: url('bell-mt/bell-mt-std-regular.eot'); 
+  src: url('bell-mt/bell-mt-std-regular?#iefix') format('embedded-opentype'),
+    url('bell-mt/bell-mt-std-regular.otf') format('otf'),
+    url('bell-mt/bell-mt-std-regular.woff') format('woff'),
+    url('bell-mt/bell-mt-std-regular.ttf')  format('truetype'),
+    url('bell-mt/bell-mt-std-regular.svg#svgFontName') format('svg'); 
+}

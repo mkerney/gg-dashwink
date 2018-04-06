@@ -1,0 +1,138 @@
+.category-nav{
+  border-left     : 0;
+  border-right    : 0;
+  margin-bottom   : 0;
+  border-color    : $light-gray;
+  background-color: $light-gray-1;
+  @include border-radius(0);
+  .navbar-nav{
+    li{
+      float: none;
+      a{
+        color       : $gray;
+        padding     : 15px;
+        font-weight : 600;
+        border-right: 1px solid $light-gray;
+        background-color: $light-gray-1;
+        @include transition(all 0.3s ease-in-out);
+        &:hover{
+          color           : $black;
+          background-color: $white;
+        }
+        &:active, &:focus{
+          background-color: $white;
+        }
+      }
+      &:first-child{
+        a{
+          border-left: 1px solid $light-gray;
+        }
+      }
+      &.active{
+        a, &:focus, &:hover{
+          color           : $black;
+          background-color: $white;
+          &:focus, &:hover{
+            color           : $black;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+.gender-wrapper{
+  padding: 20px 0 100px;
+/*  margin-top: -12vh;*/
+  .gender{
+    position: relative;
+    .thumbnail{
+      padding: 0;
+      border : 2px solid $light-gray;
+      @include border-radius(0);
+    }
+    .gender-overlay{
+      color         : $black;
+      position      : absolute;
+      font-size     : 24px;
+      font-weight   : 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display       : block;
+      left          : 50%;
+      top           : 50%;
+      @include translate(-50%, -50%);
+    }
+    &.selected, &:hover{
+      .thumbnail{
+        border-color   : $black;
+        text-decoration: none;
+      }
+    }
+  }
+  .btn-black{
+    max-width: 200px;
+    margin   : 50px auto 0;
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 320px) and (max-width: 767px){
+  .category-nav{
+    ul{
+      margin: 0;
+      li{
+        display: table-cell;
+        width  : 1%;
+        float  : none;
+        a{
+          margin : 0;
+          padding: 15px 14px;
+        }
+        &:last-child{
+          a{
+            border-right: 0;
+          }
+        }
+        &:first-child{
+          a{
+            border-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .gender-wrapper{
+    padding: 50px 0;
+    .btn-black{
+      margin-top: 0;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+  .category-nav{
+    border-bottom: 0;
+    .container{
+      padding: 0;
+    }
+    ul{
+      margin: 0;
+      li{
+        float: left;
+        width: 33.33%;
+        display: inline-block;
+        a{
+          margin: 0;
+          padding: 15px 14px;
+          border-bottom: 1px solid $light-gray;
+        }
+        &:nth-child(3){
+          a{
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

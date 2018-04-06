@@ -1,0 +1,244 @@
+*{
+  outline: none;
+}
+body {
+  font-family     : $circular-std-regular;
+  color           : $accent-black;
+  justify-content : center;
+  display         : flex;
+  /*background-color: $main-bg-color;*/
+}
+.container{
+  width    : 100%;
+  max-width: 1366px;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+.mt-0{
+  margin-top: 0;
+}
+.hidden{
+  display:none;
+}
+/*--  Custom Checkbox Styles  --*/
+.custom-check{
+  margin-bottom: 5px;
+  label{
+    &.checkbox-inline{
+      input[type="checkbox"]{
+        display:none;
+        &:checked {
+          +  span{
+            background-color: $white;
+            border          : 1px solid $black;
+            padding         : 3px;
+            @include border-radius(0);
+            @include transition(all 0.3s ease-in-out);
+            i{
+              opacity: 1;
+            }
+          }
+        }
+        + span{
+          background-color: $white;
+          border          : 1px solid $custom-check-border;
+          cursor          : pointer;
+          display         : inline-block;
+          height          : 18px;
+          line-height     : 14px;
+          margin          : -1px 10px 0 0;
+          padding         : 3px;
+          position        : relative;
+          text-align      : center;
+          vertical-align  : middle;
+          width           : 18px;
+          margin-right    : 10px;
+          @include border-radius(0);
+          @include transition(all 0.3s ease-in-out);
+          i{
+            color      : $black;
+            display    : block;
+            font-size  : 10px;
+            font-weight: 400;
+            left       : -1px;
+            margin     : -4px auto;
+            opacity    : 0;
+            overflow   : visible;
+            position   : relative;
+            top        : 2px;
+            width      : 10px;
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+      }
+    }
+  }
+  .checkbox-inline{
+    padding-left: 0;
+  }
+} 
+/*--  Custom Radio Styles  --*/
+.custom-radio{
+  margin-bottom: 5px;
+  label{
+    &.radio-inline{
+      input[type="radio"]{
+        display:none;
+        &:checked {
+          +  span{
+            background-color: $white;
+            border          : 1px solid $black;
+            padding         : 3px;
+            @include border-radius(0);
+            @include transition(all 0.3s ease-in-out);
+            i{
+              opacity: 1;
+            }
+          }
+        }
+        + span{
+          background-color: $white;
+          border          : 1px solid $custom-check-border;
+          cursor          : pointer;
+          display         : inline-block;
+          height          : 18px;
+          line-height     : 14px;
+          margin          : -1px 10px 0 0;
+          padding         : 3px;  
+          position        : relative;
+          text-align      : center;
+          vertical-align  : middle;
+          width           : 18px;
+          margin-right    : 10px;
+          @include border-radius(0);
+          @include transition(all 0.3s ease-in-out);
+          i{
+            color      : $black;
+            display    : block;
+            font-size  : 10px;
+            font-weight: 400;
+            left       : -1px;
+            margin     : -4px auto;
+            opacity    : 0;
+            overflow   : visible;
+            position   : relative;
+            top        : 2px;
+            width      : 10px;
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+      }
+    }
+  }
+  .radio-inline{
+    padding-left: 0;
+  }
+} 
+/*--*/
+
+
+
+
+.btn-black{
+  color           : $white;
+  font-size       : 14px;
+  text-align      : center;
+  text-decoration : none; 
+  line-height     : 16px;
+  letter-spacing  : 1px;
+  border          : 1px solid $white;
+  padding         : 15px 30px;
+  min-width       : 200px;
+  text-transform  : uppercase;
+  background-color: $black;
+  @include border-radius(0);
+  &:hover{
+    color           : $white;
+    text-decoration : none; 
+    border-color    : $white;
+    background-color: $black;
+  }
+  &:focus{
+    color           : $white;
+    border-color    : $white;
+    background-color: $black;
+    &:active{
+      color           : $white;
+      border-color    : $white;
+      background-color: $black;
+    }
+  }
+  &[disabled], &.btn-default[disabled]{
+    pointer-events  : none;
+    background-color: $gray;
+    &:hover, &:active, &:focus{
+      pointer-events  : none;
+      background-color: $gray;
+    }
+  }
+}
+
+.main-app-container {
+  padding-top: 2em;
+}
+
+.main-app-nav {
+  font-size: 2em;
+  text-align: center;
+}
+
+.counter-num-label {
+  color: $accent-orange;
+  padding-top: 1em;
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
+
+.counter-even-label {
+  padding-top: 1em;
+  font-size: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+
+  button {
+    background-color: #CCC;
+    border: none;
+    height: 30px;
+    width: 80px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    &:hover {
+      background-color: $accent-gray;
+    }
+  }
+}
+
+#root {
+  width: 100%;
+}
+
+.top-space {
+  margin-top:3vh;
+}
+.btn {
+  border-radius: 0
+}
+hr.or-line {
+  background-color: grey;
+  height: 1px;
+  border: 0;
+}
+.fat-input {
+  height:7vh;
+}

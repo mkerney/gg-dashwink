@@ -1,0 +1,76 @@
+.profile-wrapper{
+  input{
+    display  : block;
+    margin   : 50px auto;
+    width    : 100%;
+    padding  : 6px 12px;
+    height   : 50px;
+    max-width: 330px;
+  }
+  .dropdown{
+    display  : block;
+    margin   : 50px auto;
+    max-width: 330px;
+    width    : 100%;
+    .btn{
+      text-align : left;
+      font-weight: 600px;
+      height     : 50px;
+      display    : block;
+      float      : none;
+      width      : 100%;
+      &:hover, &:active, &:focus{
+        background-color: transparent;
+        @include box-shadow(none);
+      }
+      .caret{
+        font-family            : FontAwesome;
+        position               : relative;
+        display                : inline-block;
+        margin-top             : 10px;
+        float                  : right;
+        text-rendering         : auto;
+        -webkit-font-smoothing : antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        &:before{
+          content : "\F0D8";
+          bottom  : -1px;
+          position: absolute;
+          right   : -4px;
+        }
+        &:after{
+          content : "\F0D7";
+          bottom  : -8px;
+          position: absolute;
+          right   : -4px;
+        }
+      }
+    }
+    .dropdown-menu{
+      top  : 50px;
+      width: 100%;
+      @include border-radius(0);
+    }
+    &.open{
+      .dropdown-toggle{
+        background-color: transparent;
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 320px) and (max-width: 767px){
+  .profile-wrapper{
+    input{
+      margin: 30px auto;
+    }
+    .dropdown{
+      margin: 30px auto;
+    }
+    .btn-black{
+      margin: 10px auto 0;
+    }
+  }
+}

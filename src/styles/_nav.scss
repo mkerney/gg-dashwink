@@ -1,0 +1,92 @@
+/*--  Main Navbar  --*/
+.navbar-wrapper{
+  margin: 0;
+  border: 0;
+  background-color: $black;
+  @include border-radius(0);
+  .navbar-brand{
+    font-family: $bell-mt-regular;
+    color      :$white;
+    font-size  : 22.5px;
+    left       : 50%;
+    position   : absolute;
+    @include translate(-50%, 0);
+  }
+  .navbar-nav{
+    li{
+      a{
+        font-family   : $circular-std-regular;
+        font-size     : 12px;
+        text-transform: uppercase;
+        padding       : 15px 20px;
+        text-shadow   : none;
+        i{
+          font-size  : 20px;
+          line-height: 15px;
+          margin-left: 5px;
+        }
+      }
+    }
+    &.navbar-right{
+      li{
+        &:nth-last-of-type(1), &:nth-last-of-type(2){
+          a{
+            background : rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255,255,255,0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 768px) and (max-width: 991px){ 
+  .navbar-wrapper{
+    .container{
+      width: 100%;
+      .navbar-brand{
+        font-size  : 18px;
+        margin-left: -35px;
+      }
+    }
+    .navbar-collapse{
+      padding: 0;
+    }
+    .navbar-nav{
+      li{
+        a{
+          font-size: 10px;
+          padding  : 15px 8px;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 767px){ 
+  .navbar-wrapper{
+    .navbar-header{
+      .navbar-toggle{
+        border-color    : $white;
+        background-color: transparent;
+        @include border-radius(2);
+        &:focus, &:active{
+          background-color: transparent;
+        }
+      }
+    }
+    .navbar-nav{ 
+      &.navbar-right{
+        li{
+          &:nth-last-of-type(1), &:nth-last-of-type(2){
+            a{
+              border-top : 1px solid rgba(255,255,255,0.4);
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,  .navbar-default .navbar-nav>.active>a:hover{
+  background-color: white;
+}
+.navbar-default .navbar-nav>.active>a:active ,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:focus, {
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav>li, .navbar-default .navbar-nav>li:focus, .navbar-default .navbar-nav>li:hover {
+  background-color:white;
+  text-decoration:underline;
+}
+.profile-body{
+  background-color: $light-gray-1
+}
+
+.profile-nav{
+  margin          : 0;
+  background-color:white;
+  .navbar-nav{
+    > li{
+      a[aria-expanded="true"]{
+        color: $black;
+      }
+      &.active, &.open{
+        > a{
+          color           : $black;
+          text-decoration : underline;
+          background-color: $white;
+          &:hover, &:focus{
+            color           : $black;
+            text-decoration : underline;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-menu{
+    padding: 0;
+    li{
+      color: black;
+      background-color: white;
+      &.active{
+        a{
+          color: black;
+          background-color: white;
+        }
+      }
+      a{
+        color        : $black;
+        padding      : 15px 40px;
+        border-bottom: 1px solid $light-gray;
+        @include transition(all 0.3s ease-in-out);
+        &:active, &:focus{
+
+        }
+        &:hover{
+          color: $black;
+          background-color: $light-gray;
+        }
+      }
+    }
+    .btn-logout{
+      color     : $gray; 
+      text-align: left;
+      padding   : 15px 40px;
+      width     : 100%;
+      border    : 0;
+      background: transparent;
+      @include transition(all .3s ease-in-out);
+      &:hover{
+        color: $black;
+        background-color: $light-gray-2;
+      }
+    }
+  }
+}
+.myprofile-wrapper{
+  margin   : 0 auto 50px;;
+  max-width: 480px;
+  .btn-profile-edit{
+    color          : $gray;
+    display        : inline-block;
+    text-decoration: none;
+    padding        : 15px 0;
+  }
+  .profile-image{
+    img{
+      width : 135px;
+      height: 135px;
+      margin: 0 auto;
+    }
+  }
+  .profile-details-wrapper{
+    margin-bottom: 30px;
+    .form-group{
+      margin: 0;
+      .form-control{
+        font-family     : $circular-std-medium;
+        color           : $black;
+        height          : 50px;
+        border-bottom   : 0;
+        border-color    : $light-gray;
+        background-color: $white;
+        @include box-shadow(none);
+        @include border-radius(0);
+      }
+      &:last-of-type{
+        .form-control{
+          border-bottom: 1px solid $light-gray;
+        }
+      }
+    }
+  }
+  .btn-wrapper{
+    .btn{
+      font-family     : $circular-std-medium;
+      text-align      : left;
+      padding-left    : 70px;
+      height          : 50px;
+      position        : relative;
+      border          : 1px solid $light-gray;
+      background-color: $white;
+      &:active{
+        @include box-shadow(none);
+      }
+      i{
+        font-size: 25px;
+        position : absolute;
+        left     : 20px;
+        top      : 12px;
+      }
+      &.btn-google{
+        border-top: 0;
+        i{
+          color    : $google-color;
+          font-size: 23px;
+        }
+      }
+      &.btn-facebook{
+        i{
+          color: $facebook-color;
+        }
+      }
+    }
+  }
+  .btn-profile-save{
+    margin-top: 40px;
+    .btn{
+      color         : $white;
+      line-height   : 28px;
+      text-transform: uppercase;
+      height        : 40px; 
+      display       : inline-block;
+      border        : 1px solid transparent;
+      @include box-shadow(none);
+      &.btn-cancel{
+        border-color    : $gray;
+        margin-right    : 15px;
+        background-color: $gray;
+      }
+      &.btn-save{
+        border-color    : $black;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+
+.product-type-wrapper{
+  font-family: $circular-std-medium;
+  color      : $black;
+  max-width  : 360px;
+  min-height : 300px;
+  margin     : 0 auto;
+  .custom-radio{
+    background-color: white;
+    display: block;
+    border : 1px solid $light-gray;
+    margin : 0;
+    &:first-of-type{
+      border-bottom: 0;
+    }
+    .radio-inline{
+      text-align : left;
+      padding    : 0;
+      width      : 100%;
+      height     : 50px;
+      display    : block;
+      padding    : 15px 10px;
+      line-height: 25px;
+      background-color: $white;
+      input[type="radio"]{
+        &:checked{
+          &+span{
+            @include circle(30px);
+            padding: 8px;
+            i{
+              left  : -2px;
+              margin: -3px auto;
+            }
+          }
+        }
+      }
+      input[type="radio"]{
+        &+span{
+          float   : right;
+          padding : 8px;
+          margin  : 0;
+          position: absolute;
+          top     : 10px;
+          right   : 10px;
+          @include circle(30px);
+        }
+      }
+    }
+  }
+  .custom-check{
+    display: block;
+    border : 1px solid $light-gray;
+    border-bottom: 0;
+    margin : 0;
+    &:last-of-type{
+      border-bottom: 1px solid $light-gray;
+    }
+    .checkbox-inline{
+      text-align : left;
+      padding    : 0;
+      width      : 100%;
+      height     : 50px;
+      display    : block;
+      padding    : 15px 10px;
+      line-height: 25px;
+      background-color: $white;
+      input[type="checkbox"]{
+        &:checked{
+          &+span{
+            padding: 8px;
+            @include circle(30px);
+            i{
+              left  : -2px;
+              margin: -3px auto;
+            }
+          }
+        }
+      }
+      input[type="checkbox"]{
+        &+span{
+          float   : right;
+          padding : 8px;
+          margin  : 0;
+          position: absolute;
+          top     : 10px;
+          right   : 10px;
+          @include circle(30px);
+        }
+      }
+    }
+  }
+}

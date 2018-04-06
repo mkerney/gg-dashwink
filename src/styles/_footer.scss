@@ -1,0 +1,155 @@
+.footer-wrapper {
+  font-size       : 14px;
+  text-align      : center;
+  padding         : 15px 40px;
+  background-color: $black;
+  a {
+    font-size      : 13px;
+    color          : $white;
+    display        : inline-block;
+    padding        : 15px 20px;
+    text-decoration: none;
+    @include transition(all 0.3s ease-in-out);
+    &:hover {
+      color: $accent-blue;
+    }
+  }
+  .footer-menu{
+    float  : left;
+    margin : 0;
+    display: inline-block;
+  }
+  .social-menu{
+    font-size: 18px;
+    margin   : 0;
+    display  : inline-block;
+    float    : right;
+  }
+  p{
+    text-align: left;
+    color: $white;
+    font-size: 11px;
+    margin: 0;
+    padding: 15px 20px;
+  }
+}
+.subscriber-form-wrapper{
+  background: rgba(255, 255, 255, 0.5);
+  .container{
+    padding-right: 50px;
+    position     : relative;
+  }
+  .subscriber-close{
+    color           : $black;
+    font-size       : 50px;
+    padding         : 5px;
+    border          : 0;
+    line-height     : 50px;
+    float           : right;
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+    background-color: transparent;
+    &:active{
+      color           : $black;
+      background-color: transparent;
+      @include box-shadow(none);
+    }
+  }
+  p{
+    font-size  : 16px;
+    text-align : center;
+    margin     : 0;
+  }
+  .form-container{
+    padding  : 20px 0;
+    max-width: 900px;
+    margin   : 0 auto;
+    form{
+      .form-group{
+        margin-bottom: 10px;
+      }
+      label{
+        color: $black;
+      }
+      input[type="text"]{
+        border-color: $black;
+        height      : 40px;
+        @include border-radius(0);
+        @include box-shadow(none);
+        &:focus{
+          @include box-shadow(none);
+        }
+      }
+      .input-group-addon{
+        border: 0;
+        padding: 0;
+        button{
+          color           : $white;
+          text-transform  : uppercase;
+          height          : 40px;
+          border-left     : 0;
+          border-color    : $black;
+          background-color: $black;
+        }
+      }
+    }
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 768px) and (max-width: 991px){ 
+  .footer-wrapper{
+    a{
+      padding: 10px;
+    }
+  }
+  .subscriber-form-wrapper{
+    p{
+      margin: 0 0 30px;
+    }
+    .form-container{
+      form{
+        .form-group{
+          margin-bottom: 5px;
+          &.mb-0{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 767px){ 
+  .footer-wrapper{
+    text-align: center;
+    a{
+      padding: 10px;
+    }
+    .footer-menu{
+      float: none;
+    }
+    .social-menu{
+      float: none;
+    }
+  }
+  .subscriber-form-wrapper{
+    p{
+      margin: 0 0 30px;
+    }
+    .subscriber-close{
+      right: 10px;
+      top: 10px;
+      line-height: 30px;
+    }
+    .form-container{
+      form{
+        .form-group{
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

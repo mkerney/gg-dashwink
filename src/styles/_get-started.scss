@@ -1,0 +1,106 @@
+.slider-wrapper{
+  .carousel-control{
+    display: none;
+  }
+  .item{
+    img{
+      width          : 100%;
+      height         : 70vh;
+      min-height     : 600px;
+      object-fit     : cover;
+      object-position: center top;
+    }
+    .carousel-position{
+      text-align : center;
+      text-shadow: none;
+      width      : 30%;
+      width      : 100%;
+      max-width  : 500px;
+      top        : 50%;
+      left       : 50%;
+      @include translate(-50%, -50%);
+      h1{
+        font-family: $bell-mt-regular; 
+        color      : $black;
+        font-family: 44px;
+        margin     : 0 0 50px;
+      }
+      p{
+        font-family   : $circular-std-regular; 
+        color         : $black;
+        font-size     : 19px;
+        line-height   : 24px;
+        position      : relative;
+        margin-bottom : 50px;
+      }
+    }
+    &:first-of-type{
+      .carousel-position{
+        text-align : left;
+        text-shadow: none;
+        left       : 20%;
+        @include translate(0, -50%);
+        p{
+          padding-bottom: 35px;
+          &::after{
+            content         : " ";
+            height          : 2px;
+            width           : 80px;
+            left            : 0;
+            bottom          : 0;
+            position        : absolute;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+  .carousel-indicators{
+    li{
+      border-color    : #b3b3b3;
+      background-color: #b3b3b3;
+      &.active{
+        width           : 10px;
+        height          : 10px;
+        margin          : 1px;
+        border-color    : $black;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+/*--  Media Styles  --*/
+@media(min-width: 768px) and (max-width: 991px){ 
+  .slider-wrapper{
+    .item{
+      img{
+        min-height: 450px;
+      }
+      .carousel-position{
+        bottom: auto;
+      }
+    }
+  }
+}
+@media(min-width: 320px) and (max-width: 767px){ 
+  .slider-wrapper{
+    .item{
+      img{
+        min-height: 450px;
+      }
+      .carousel-position{
+        width : auto;
+        right : 15px;
+        bottom: auto;
+        h1{
+          margin: 0 0 30px;
+        }
+        p{
+          padding-bottom: 30px;
+          margin-bottom : 30px;
+        }
+      }
+    }
+  }
+}
